@@ -38,7 +38,10 @@ function App() {
 
   return (
     <div className="news-blog">
-      <h1 style={{ textAlign: "center" }}>Лента новостей</h1>
+      {items.length > 0 &&
+        <h1 style={{ textAlign: "center" }}>Лента новостей</h1>
+
+      }
       {items.map((item, index) => {
         const isTenth = (index + 1) % 10 === 0 || index === items.length - 1;
 
